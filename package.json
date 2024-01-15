@@ -1,0 +1,36 @@
+{
+  "name": "swisschess",
+  "version": "1.0.0",
+  "description": "Utility functions for Swiss system chess tournaments.",
+  "type": "module",
+  "exports": {
+    "import": {
+      "default": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "require": {
+      "default": "./dist/index.cjs",
+      "types": "./dist/index.d.cts"
+    }
+  },
+  "scripts": {
+    "test": "tsx --test ./tests/**/*.test.ts",
+    "build": "tsup --format=esm,cjs --dts"
+  },
+  "keywords": [
+    "chess",
+    "Swiss system",
+    "tournament"
+  ],
+  "author": "Melvin Doucet <melv.douc@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "@faker-js/faker": "^8.3.1",
+    "@types/chai": "^4.3.11",
+    "@types/node": "^20.11.0",
+    "chai": "^5.0.0",
+    "tsup": "^8.0.1",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3"
+  }
+}
