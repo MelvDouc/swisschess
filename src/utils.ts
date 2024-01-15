@@ -1,6 +1,5 @@
 import { Result } from "$src/constants.js";
 import Player from "$src/Player.js";
-import { faker } from "@faker-js/faker";
 
 // ===== ===== ===== ===== =====
 // ARRAY
@@ -26,7 +25,7 @@ export function getRandomPlayers(count: number) {
   return Array.from({ length: count }, (_, i) => {
     return new Player({
       id: i + 1,
-      name: faker.person.fullName(),
+      name: `player${i + 1}`,
       rating: randomInt(1199, 2900)
     });
   });
