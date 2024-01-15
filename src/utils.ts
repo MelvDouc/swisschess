@@ -1,5 +1,5 @@
 import { Result } from "$src/constants.js";
-import type { Player } from "$src/types.js";
+import Player from "$src/Player.js";
 import { faker } from "@faker-js/faker";
 
 // ===== ===== ===== ===== =====
@@ -18,22 +18,27 @@ export function findLastIndex<T>(arr: T[], predicate: (element: T, index: number
 // TESTING
 // ===== ===== ===== ===== =====
 
-const results = Object.values(Result);
-
-export function randomInt(min: number, max: number) {
+function randomInt(min: number, max: number) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 export function getRandomPlayers(count: number) {
-  return Array.from<unknown, Player>({ length: count }, (_, i) => {
-    return {
+  return Array.from({ length: count }, (_, i) => {
+    return new Player({
       id: i + 1,
       name: faker.person.fullName(),
       rating: randomInt(1199, 2900)
-    };
+    });
   });
 }
 
 export function getRandomResult() {
-  return results[randomInt(0, results.length - 1)];
+  switch (randomInt(1, 3)) {
+    case 1:
+      return Result.FirstPlayerWin;
+    case 2:
+      return Result.Draw;
+    default:
+      return Result.SecondPlayerWin;
+  }
 }

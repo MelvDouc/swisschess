@@ -8,3 +8,4 @@ tests
 .npmignore
 *.json
 !package.json
+tsup.config.js

@@ -15,7 +15,8 @@
   },
   "scripts": {
     "test": "tsx --test ./tests/**/*.test.ts",
-    "build": "tsup --format=esm,cjs --dts"
+    "build": "rm -rf dist && tsup",
+    "prepublishOnly": "npm run build"
   },
   "keywords": [
     "chess",

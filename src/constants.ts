@@ -1,11 +1,3 @@
-import type { Player } from "$src/types.js";
-
-export const nullPlayer: Player = {
-  id: 0,
-  name: "",
-  rating: 0
-};
-
 export enum Result {
   None = "*",
   FirstPlayerWin = "1-0",
@@ -16,7 +8,7 @@ export enum Result {
 }
 
 export enum Color {
-  None,
-  White,
-  Black
+  None = "",
+  White = "W",
+  Black = "B"
 }

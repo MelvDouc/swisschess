@@ -8,6 +8,7 @@
     "esModuleInterop": true,
     "skipDefaultLibCheck": true,
     "strict": true,
+    "forceConsistentCasingInFileNames": true,
     "noUnusedLocals": true,
     "verbatimModuleSyntax": true,
     "declaration": true,

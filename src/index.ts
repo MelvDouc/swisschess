@@ -1,4 +1,5 @@
+export { default as Pairing } from "$src/Pairing.js";
+export { default as Player } from "$src/Player.js";
+export { default as SwissTournament } from "$src/SwissTournament.js";
 export { Color, Result } from "$src/constants.js";
-export { getNextRound } from "$src/pairing.js";
-export { getStandings } from "$src/standings.js";
-export { getHistoryRecord } from "$src/tournament.js";
+export type { PlayerData } from "$src/types.js";
