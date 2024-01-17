@@ -12,6 +12,7 @@ export default class SwissTournament {
     win: number;
     draw: number;
   };
+  public readonly extraInfo: Record<string | number | symbol, any> = {};
 
   public constructor({ players, numberOfRounds, points }: {
     players: Player[];
