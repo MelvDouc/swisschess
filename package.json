@@ -1,6 +1,6 @@
 {
   "name": "swisschess",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Utility functions for Swiss system chess tournaments.",
   "type": "module",
   "module": "./dist/index.js",
